@@ -1,102 +1,213 @@
-/* ================================
-   CAT BREED CONTAINER
-   ================================ */
+/* General page styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-.cat-breed-container {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1f3c88;
+    color: white;
+    text-align: center;
+    padding: 3em 1em;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5em;
+}
+
+header a {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #1f3c88;
+    text-decoration: none;
+    padding: 0.7em 1.5em;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+header a:hover {
+    background-color: #dbe5ff;
+}
+
+
+/* General section styling */
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3em 2em;
+}
+
+section h2 {
+    color: #1f3c88;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2rem;
+}
+
+section h3 {
+    color: #1f3c88;
+    margin-bottom: 0.8em;
+}
+
+
+/* About Me section */
+#about {
+    background-color: white;
+    margin-top: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#about p {
+    margin-bottom: 1em;
+}
+
+#about ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em;
+    margin-top: 1em;
+}
+
+#about li {
+    background-color: #1f3c88;
+    color: white;
+    padding: 0.6em 1em;
+    border-radius: 20px;
+}
+
+
+/* Projects section */
+#projects {
+    padding-top: 3em;
+}
+
+
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+}
+
+
+/* Individual project cards */
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Cat breed container */
+.Cat-breed-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 2em;
 }
 
-
-/* ================================
-   CAT COLUMN
-   Holds one image card + text card
-   ================================ */
-
-.cat-column {
+/* Cat breed cards */
+.Cat-breed-cards .blog-content {
     flex: 1 1 300px;
     margin: 1em;
-}
-
-
-/* ================================
-   IMAGE CARD
-   ================================ */
-
-.cat-image-card {
     padding: 1em;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-
     transition: transform 0.3s;
+    
 }
 
-
-/* Image inside the image card */
-
-.cat-image-card img {
+/* Images */
+.Cat-breed-cards img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
+.Cat-breed-cards img:hover {
+    transform: translateY(-3px);
+}
 
-/* ================================
-   TEXT CARD
-   ================================ */
 
-.cat-text-card {
-    margin-top: 1em;
-    padding: 1em;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Project content */
+.project-content {
+    padding: 1.5em;
+}
+
+.project-content h3 {
+    margin-bottom: 0.8em;
+}
+
+.project-content p {
+    margin-bottom: 1em;
+}
+
+
+/* Project links */
+.project-content a {
+    display: inline-block;
+    background-color: #1f3c88;
+    color: white;
+    text-decoration: none;
+    padding: 0.6em 1.2em;
+    border-radius: 5px;
+}
+
+.project-content a:hover {
+    background-color: #162c65;
+}
+
+
+/* Footer */
+footer {
+    background-color: #1f3c88;
+    color: white;
     text-align: center;
+    padding: 1.5em;
+    margin-top: 2em;
 }
 
 
-/* Heading inside text card */
-
-.cat-text-card h2 {
-    margin: 0.5em 0;
-}
-
-
-/* Paragraph inside text card */
-
-.cat-text-card p {
-    margin: 0.5em 0 1em;
-}
-
-
-/* ================================
-   HOVER EFFECT
-   ================================ */
-
-.cat-image-card:hover {
-    transform: scale(1.05);
-}
-
-
-/* ================================
-   RESPONSIVE DESIGN
-   ================================ */
-
+/* Responsive layout */
 @media (max-width: 768px) {
 
-    .cat-breed-container {
-        flex-direction: column;
-        align-items: center;
+    header h1 {
+        font-size: 2rem;
     }
 
-    .cat-column {
-        flex: 1 1 100%;
-        max-width: 100%;
-        width: 100%;
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
+    section {
+        padding: 2em 1em;
+    }
+
+    #about ul {
+        justify-content: center;
+    }
 }
